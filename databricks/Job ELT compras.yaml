@@ -25,4 +25,9 @@ resources:
         git_branch: main
       queue:
         enabled: true
+      parameters:
+        - name: tipo_carga
+          default: Incremental
+        - name: fecha_carga
+          default: 2025-06-30
       performance_target: PERFORMANCE_OPTIMIZED
