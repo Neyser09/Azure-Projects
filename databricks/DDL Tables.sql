@@ -115,7 +115,7 @@ categoria,
 subcategoria
 FROM linio.silver_productos;
 
-
+-- Se ha creado la tabla gold_fact_compras
 CREATE OR REPLACE TABLE linio.gold_fact_compras(
  periodo date ,
  venta_id integer ,
@@ -139,5 +139,6 @@ CREATE OR REPLACE TABLE linio.gold_fact_compras(
 USING DELTA
 PARTITIONED BY (periodo)
 LOCATION 'abfss://sales-store@azdlssalesstore.dfs.core.windows.net/gold/fact_compras';
+
 
 -- fin
